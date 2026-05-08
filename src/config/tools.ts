@@ -9,7 +9,7 @@ export interface Tool {
 
 export const tools: Tool[] = [
   { slug: 'resume-builder', title: 'Resume Builder', description: 'Create an ATS-friendly resume in 5 minutes. Live preview, instant PDF download.', icon: '📄', category: 'builder', available: true },
-  { slug: 'cover-letter-builder', title: 'Cover Letter Builder', description: 'Match your resume style. Write once, customize per role.', icon: '✉️', category: 'cover-letter', available: false },
+  { slug: 'cover-letter-builder', title: 'Cover Letter Builder', description: 'Match your resume style. Write once, customize per role.', icon: '✉️', category: 'cover-letter', available: true },
   { slug: 'ats-checker', title: 'ATS Resume Checker', description: 'Score your resume against ATS systems. Find keyword gaps.', icon: '🎯', category: 'optimize', available: false },
   { slug: 'resume-templates', title: 'Resume Templates', description: 'Browse professional templates. Pick one, customize, download.', icon: '🎨', category: 'examples', available: false },
   { slug: 'resume-keywords', title: 'Keyword Optimizer', description: 'Match your resume to a job description. Boost interview rate.', icon: '🔍', category: 'optimize', available: false },

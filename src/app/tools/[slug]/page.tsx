@@ -4,6 +4,7 @@ import { Footer } from '@/components/Footer';
 import { tools, getTool } from '@/config/tools';
 import { siteConfig } from '@/config/site';
 import { ResumeBuilder } from '@/components/tools/ResumeBuilder';
+import { CoverLetterBuilder } from '@/components/tools/CoverLetterBuilder';
 import { ComingSoon } from '@/components/tools/ComingSoon';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -54,6 +55,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         </header>
 
         {slug === 'resume-builder' && <ResumeBuilder />}
+        {slug === 'cover-letter-builder' && <CoverLetterBuilder />}
         {!tool.available && <ComingSoon toolTitle={tool.title} />}
       </main>
       <Footer />
