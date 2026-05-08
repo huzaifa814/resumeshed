@@ -5,6 +5,11 @@ import { tools, getTool } from '@/config/tools';
 import { siteConfig } from '@/config/site';
 import { ResumeBuilder } from '@/components/tools/ResumeBuilder';
 import { CoverLetterBuilder } from '@/components/tools/CoverLetterBuilder';
+import { AtsChecker } from '@/components/tools/AtsChecker';
+import { KeywordOptimizer } from '@/components/tools/KeywordOptimizer';
+import { ResumeSummaryGenerator } from '@/components/tools/ResumeSummaryGenerator';
+import { CoverLetterTemplate } from '@/components/tools/CoverLetterTemplate';
+import { ResumeTemplates } from '@/components/tools/ResumeTemplates';
 import { ComingSoon } from '@/components/tools/ComingSoon';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -56,6 +61,11 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
         {slug === 'resume-builder' && <ResumeBuilder />}
         {slug === 'cover-letter-builder' && <CoverLetterBuilder />}
+        {slug === 'ats-checker' && <AtsChecker />}
+        {slug === 'resume-keywords' && <KeywordOptimizer />}
+        {slug === 'resume-summary-generator' && <ResumeSummaryGenerator />}
+        {slug === 'cover-letter-template' && <CoverLetterTemplate />}
+        {slug === 'resume-templates' && <ResumeTemplates />}
         {!tool.available && <ComingSoon toolTitle={tool.title} />}
       </main>
       <Footer />
