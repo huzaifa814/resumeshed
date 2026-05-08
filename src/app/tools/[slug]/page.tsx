@@ -10,6 +10,8 @@ import { KeywordOptimizer } from '@/components/tools/KeywordOptimizer';
 import { ResumeSummaryGenerator } from '@/components/tools/ResumeSummaryGenerator';
 import { CoverLetterTemplate } from '@/components/tools/CoverLetterTemplate';
 import { ResumeTemplates } from '@/components/tools/ResumeTemplates';
+import { LinkedinToResume } from '@/components/tools/LinkedinToResume';
+import { ResumePdfConverter } from '@/components/tools/ResumePdfConverter';
 import { ComingSoon } from '@/components/tools/ComingSoon';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -66,6 +68,8 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         {slug === 'resume-summary-generator' && <ResumeSummaryGenerator />}
         {slug === 'cover-letter-template' && <CoverLetterTemplate />}
         {slug === 'resume-templates' && <ResumeTemplates />}
+        {slug === 'linkedin-to-resume' && <LinkedinToResume />}
+        {slug === 'resume-pdf-converter' && <ResumePdfConverter />}
         {!tool.available && <ComingSoon toolTitle={tool.title} />}
       </main>
       <Footer />

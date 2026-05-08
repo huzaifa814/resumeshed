@@ -15,8 +15,8 @@ export const tools: Tool[] = [
   { slug: 'ats-checker', title: 'ATS Resume Checker', description: 'Score your resume against ATS systems. Find keyword gaps and formatting issues.', icon: '🎯', category: 'optimize', available: true },
   { slug: 'resume-keywords', title: 'Keyword Optimizer', description: 'Match your resume to a job description. Boost interview rate.', icon: '🔍', category: 'optimize', available: true },
   { slug: 'resume-summary-generator', title: 'Resume Summary Generator', description: 'Write a strong professional summary in seconds. 4 variations.', icon: '✨', category: 'optimize', available: true },
-  { slug: 'linkedin-to-resume', title: 'LinkedIn to Resume', description: 'Import LinkedIn profile, format as a polished PDF resume.', icon: '🔗', category: 'builder', available: false },
-  { slug: 'resume-pdf-converter', title: 'Resume to PDF', description: 'Convert Word resume to clean PDF. Preserves formatting.', icon: '📑', category: 'builder', available: false },
+  { slug: 'linkedin-to-resume', title: 'LinkedIn to Resume', description: 'Paste your LinkedIn profile, get a clean ATS-friendly PDF resume.', icon: '🔗', category: 'builder', available: true },
+  { slug: 'resume-pdf-converter', title: 'Word to PDF Resume', description: 'Convert .docx Word resume to clean PDF. Preserves formatting, browser-only.', icon: '📑', category: 'builder', available: true },
 ];
 
 export const getTool = (slug: string) => tools.find(t => t.slug === slug);
