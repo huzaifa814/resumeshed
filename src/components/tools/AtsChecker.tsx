@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-const STOP_WORDS = new Set('a an the and or but if then so to of for in on at by with as is are was were be been being have has had do does did will would should could may might must can shall this that these those it its i you he she we they me him her us them my your his their our its'.split(/\s+/));
+const STOP_WORDS = new Set('a an the and or but if then so to of for in on at by with as is are was were be been being have has had do does did will would should could may might must can shall this that these those it its i you he she we they me him her us them my your his their our its also more than just from into about over under across between among such very own only same too any each every all both other another some many much most few less least more first last next then now here there when where why how what which who whom whose looking seeking want wants needs need needed work works working worked years year experience experiences experienced strong skills skill role roles position positions team teams company companies new join joining great good better best required requirement requirements ability abilities including include includes included plus bonus preferred ideal'.split(/\s+/));
 
 const ATS_RED_FLAGS = [
   { test: (t: string) => /\b(image|graphic|chart|table)\b/i.test(t), msg: 'Avoid embedded images, charts, or complex tables — many ATS strip them.', tip: 'Use plain text, bullet points, and standard headings instead.' },
@@ -20,7 +20,9 @@ export function AtsChecker() {
   const [scored, setScored] = useState(false);
 
   const tokenize = (t: string) =>
-    t.toLowerCase().replace(/[^a-z0-9+#.\s-]/g, ' ').split(/\s+/).filter(w => w.length >= 3 && !STOP_WORDS.has(w));
+    t.toLowerCase().replace(/[^a-z0-9+#.\s-]/g, ' ').split(/\s+/)
+      .map(w => w.replace(/^[.\-]+|[.\-]+$/g, ''))
+      .filter(w => w.length >= 3 && !STOP_WORDS.has(w) && !/^\d+$/.test(w));
 
   const resumeTokens = new Set(tokenize(resume));
   const jobTokens = tokenize(job);

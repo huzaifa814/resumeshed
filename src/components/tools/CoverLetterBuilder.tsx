@@ -65,7 +65,7 @@ export function CoverLetterBuilder() {
         <h2 className="text-xl font-bold mb-3 print:hidden">Live Preview</h2>
         <div id="cover-letter-preview" className="p-12 rounded-xl bg-white text-gray-900 shadow-md max-w-[8.5in] mx-auto print:shadow-none print:rounded-none">
           <header className="mb-6">
-            <h1 className="text-xl font-bold">{name}</h1>
+            <div className="text-xl font-bold">{name}</div>
             <p className="text-sm text-gray-700">{email} · {phone}</p>
           </header>
           <p className="text-sm mb-6">{date}</p>

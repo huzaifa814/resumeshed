@@ -107,7 +107,7 @@ export function ResumeBuilder() {
         <h2 className="text-xl font-bold mb-3 print:hidden">Live Preview</h2>
         <div id="resume-preview" className="p-8 rounded-xl bg-white text-gray-900 shadow-md max-w-[8.5in] mx-auto print:shadow-none print:rounded-none print:p-12">
           <header className="border-b-2 border-gray-900 pb-4 mb-4">
-            <h1 className="text-3xl font-bold mb-1">{name}</h1>
+            <div className="text-3xl font-bold mb-1">{name}</div>
             <p className="text-lg text-gray-700">{title}</p>
             <p className="text-sm text-gray-600 mt-2">{email} · {phone} · {location} · {linkedin}</p>
           </header>
